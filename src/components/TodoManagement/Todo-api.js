@@ -34,3 +34,11 @@ export async function getTodos() {
 
 	return res.json();
 }
+
+export async function getTodoUrl(id) {
+	const res = await fetch(`${TODO_URL}/${id}`,{
+		method:'GET'
+	})
+
+	return res.json();
+}

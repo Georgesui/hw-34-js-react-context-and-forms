@@ -1,3 +1,10 @@
+Создайте на вашем github репозиторий по следующему шаблону HW#-name. Все результаты нужно запушить в ваш репозиторий и прикрепить ссылку на hillel портале.
+Сгенерируйте react приложение. Обратите внимание что нужно установить yarn или npm пакеты после генерации проекта.
+Создайте README.md с описанием задания.
+При клике по имени Todo нужно сделать редирект на отдельную страницу с описанием выбранной задачи.
+Изминение статуса нужно перенести на нажатие по кнопке Change Status. Данную кнопку можно разместить возле кнопки удаления.
+Реализовать форму с помощью formik. Пользователь должен иметь возможность отредактировать todo и сохранить ее.
+
 # Getting Started with Create React App and Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.

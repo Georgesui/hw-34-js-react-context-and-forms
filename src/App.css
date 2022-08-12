@@ -30,6 +30,13 @@
 	color: brown;
 }
 
+.MuiButtonBase-root.buttonForDelete{
+	margin-right: 5px;
+}
+.MuiButtonBase-root.buttonToAdd{
+	margin-left: 5px;
+}
+
 .buttonForDelete {
 	background-color: bisque;
 	color: firebrick;
@@ -47,4 +54,30 @@
 	margin-left: 5px;
 	background-color: cadetblue;
 	color: black;
+}
+
+#outlined-basic {
+	display: inline-block;
+	padding: 10.5px 10px;
+	margin-right: 10px;	
+}
+
+.MuiBox-root.css-0 {
+	padding-top: 10px;
+}
+
+.linkForTodo{
+	text-decoration: none;
+	margin-left: 5px;
+	color:black;
+	cursor: pointer;
+}
+
+.MuiBox-root.buttonBack {
+	text-decoration: none;
+}
+
+.MuiFormControl-root.css-1nrlq1o-MuiFormControl-root {
+	display: flex;
+	flex-direction: row;
 }

@@ -1,4 +1,4 @@
-import { getTodos, deleteTodo, addTodosToDb, updateTodoRequest } from '../../components/TodoManagement/Todo-api';
+import { getTodos, deleteTodo, addTodosToDb, updateTodoRequest, getTodoUrl} from '../../components/TodoManagement/Todo-api';
 export const SET_TODOS = '[Todolist] set todos'
 export const ADD_TODOS = '[Todolist] add todos'
 export const DELETE_TODO = '[Todolist] delete todo'
@@ -77,5 +77,22 @@ export function fetchUpdateTodos(id) {
 		} catch (e) {
 			console.warn(e)
 		}
+	}
+}
+
+export function fetchTodoDetails(id) {
+	return async function () {
+		try {
+			return getTodoUrl(id)
+		}
+		catch(er) {
+			console.warn(er)
+		}
+		}
+}
+
+export function fetchUpdateTodoDetails (id,todo) {
+	return async function () {
+		return updateTodoRequest(id,todo)
 	}
 }

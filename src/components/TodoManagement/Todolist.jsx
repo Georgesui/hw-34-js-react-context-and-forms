@@ -1,35 +1,17 @@
-import React, { useEffect } from 'react';
-import UserList from './UserList'
-import UserForm from './UserForm';
-import {fetchInitTodos, fetchAddTodos, fetchDeleteTodos, fetchUpdateTodos} from '../../store/actions'
-import { useSelector, useDispatch } from 'react-redux';
+import TodoListItem from './TodoListItem';
 
-const TodoList = () => {
-	const todos = useSelector((state)=> state.todos)
-	const dispatch = useDispatch()
-	
-	useEffect(()=>{
-		dispatch(fetchInitTodos())
-},[])
-
-async function addToDoList(todo) {
-	dispatch(fetchAddTodos(todo))
-}
-
-async function deleteElement(id) {
-		dispatch(fetchDeleteTodos(id))
-}
-
-	 async function updateStatus(id) {
-			dispatch(fetchUpdateTodos(id))
-		}
-
+export default function TodoList({ todos, onDelete, onChangeStatus }) {
 	return (
-		<div className='container'>
-			<UserForm onSubmit={addToDoList}></UserForm>
-			<UserList todos={todos} onDelete={deleteElement} onChangeStatus={updateStatus}></UserList>
-		</div >
+		<ul className='list'>
+			{
+				todos.map((todo) => {
+					return <TodoListItem
+						todos={todo}
+						key={todo.id}
+						onDelete={onDelete}
+						onChangeStatus={onChangeStatus}></TodoListItem>
+				})
+			}
+		</ul >
 	)
 }
-
-export default TodoList
